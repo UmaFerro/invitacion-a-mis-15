@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
 }
 
 ::selection {
-  background-color: $red-400;
+  background-color: $teal-400;
   color: $bg;
 }
 
@@ -58,10 +58,14 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  text-align: center;
   font-size: 100%;
   font-family: $font;
   color: $gray-200;
-  background-color: $clr;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/uma.jpeg');
+  background-position: 40% center;
+  background-attachment: fixed;
+  background-size: cover;
   #content {
     flex-grow: 1;
     display: flex;

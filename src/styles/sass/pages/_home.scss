@@ -1,0 +1,165 @@
+@use "../abstracts" as *;
+
+.index {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  min-height: 100vh;
+  div {
+    @include flex(column, nowrap, center, center);
+    font-family: $cursive;
+    .title {
+      font-size: 6rem;
+    }
+    .subtitle {
+      font-size: 3rem;
+      margin: -1rem;
+    }
+  }
+  .date {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: .25rem 0rem;
+    background-color: $teal-400;
+    border-radius: .5rem;
+  }
+}
+
+.countdown {
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+  min-height: 10rem;
+  background-color: $teal-300;
+  font-size: 2rem;
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+.address {
+  @include flex(column, nowrap, center, center);
+  gap: 1rem;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  background-color: $teal-50;
+  color: $clr;
+  svg {
+    width: 6rem;
+    color: $teal-200;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  span {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.hashtag {
+  @include flex(column, nowrap, center, center);
+  gap: 1rem;
+  padding: 4rem 2rem;
+  background-color: $teal-300;
+  svg {
+    width: 6rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  span {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.songs {
+  @include flex(column, nowrap, center, center);
+  gap: 1rem;
+  padding: 4rem 2rem;
+  background-color: $teal-50;
+  color: $clr;
+  svg {
+    width: 6rem;
+    color: $teal-200;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+.paragraph {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  font-size: 1.5rem;
+}
+
+.dressCode {
+  @include flex(column, nowrap, center, center);
+  gap: 1rem;
+  padding: 4rem 2rem;
+  background-color: $teal-300;
+  svg {
+    width: 6rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  span {
+    width: 100%;
+    background-color: $teal-50;
+    color: $teal-300;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: .5rem;
+    border-radius: 1rem;
+  }
+}
+
+.confirmation {
+  @include flex(column, nowrap, center, center);
+  gap: 1rem;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  background-color: $teal-50;
+  color: $clr;
+  svg {
+    width: 6rem;
+    color: $teal-200;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.end {
+  @include flex(column, nowrap, center, center);
+  padding: 2rem;
+  background-color: $teal-300;
+  h1 {
+    font-family: $cursive;
+    font-size: 5rem;
+  }
+  strong {
+    font-size: 2.5rem;
+    &.alternative {
+      display: inline-block;
+      transform: scaleX(-1) translateX(-8px);
+    }
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+}

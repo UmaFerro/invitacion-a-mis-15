@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.primary-button {
+  background-color: $teal-200;
+  color: $teal-50;
+  padding: .5em 1.5em;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 200ms linear;
+  &:disabled {
+    opacity: .3;
+  }
+}
+
+.secondary-button {
+  color: $teal-200;
+  background-color: $teal-50;
+  padding: .5em 1.5em;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 100ms linear;
+  &:disabled {
+    opacity: .3;
+  }
+}

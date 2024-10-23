@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.form {
+  width: 100%;
+  input {
+    width: 100%;
+    background-color: $teal-100;
+    text-align: center;
+    border-radius: 1rem;
+    margin: .5rem 0;
+    font-size: 1.25rem;
+    padding: .5rem .75rem;
+    transition: all 100ms linear;
+    &:focus {
+      background-color: $teal-400;
+    }
+  }
+}
+
+.select {
+  @include flex(row, nowrap, center, center);
+  gap: 2rem;
+  font-size: 1.5rem;
+  .option {
+    @include flex(row, nowrap, center, center);
+    gap: .5rem;
+    svg {
+      width: 1.5rem;
+    }
+  }
+  .active {
+    opacity: .5;
+  }
+  .fade {
+    opacity: 0;
+    transform: scale(0);
+    animation: fade_in 200ms linear forwards;
+  }
+}

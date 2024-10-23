@@ -5,7 +5,9 @@
 @use './base/reset';
 
 //components
-
+@use './components/buttons';
+@use './components/images';
+@use './components/form';
 
 //pages
 @use './pages/home';
