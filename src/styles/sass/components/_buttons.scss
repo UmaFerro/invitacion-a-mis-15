@@ -1,8 +1,8 @@
 @use '../abstracts' as *;
 
 .primary-button {
-  background-color: $teal-200;
-  color: $teal-50;
+  background-color: $purple-200;
+  color: $purple-50;
   padding: .5em 1.5em;
   border-radius: 1rem;
   font-weight: 600;
@@ -13,8 +13,8 @@
 }
 
 .secondary-button {
-  color: $teal-200;
-  background-color: $teal-50;
+  color: $purple-300;
+  background-color: $purple-50;
   padding: .5em 1.5em;
   border-radius: 1rem;
   font-weight: 600;

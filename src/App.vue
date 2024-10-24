@@ -1,6 +1,19 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+//AUDIO
+const audio = new Audio('paradise.mp3')
+const isPlaying = ref(false)
+
+const toggleMusic = () => {
+  if (isPlaying.value) {
+    audio.pause()
+  } else {
+    audio.play()
+  }
+  isPlaying.value = !isPlaying.value
+}
+
 //SONG FORM
 const song = ref({
   name: '',
@@ -8,11 +21,9 @@ const song = ref({
   link: ''
 })
 const songRedirect = () => {
-  const data = `
-    Nombre de la cancion: ${song.value.name}
-    Autor: ${song.value.author}
-    Link de la cancion: ${song.value.link}
-  `
+  const data = `Nombre de la cancion: ${song.value.name}
+  Autor: ${song.value.author}
+  Link de la cancion: ${song.value.link}`
   const encodedData = encodeURIComponent(data);
   return `https://wa.me/+5492235219344?text=${encodedData}`;
 }
@@ -23,11 +34,9 @@ const confirmation = ref({
   data: ''
 })
 const confirmationRedirect = () => {
-  const data = `
-    Nombre completo: ${confirmation.value.fullName}
-    Asistencia: ${confirmation.value.select}
-    ${confirmation.value.data === '' ? '' : `Dato importante: ${confirmation.value.data}`}
-  `
+  const data = `Nombre completo: ${confirmation.value.fullName}
+  Asistencia: ${confirmation.value.select}
+  ${confirmation.value.data === '' ? '' : `Dato importante: ${confirmation.value.data}`}`
   const encodedData = encodeURIComponent(data);
   return `https://wa.me/+5492235219344?text=${encodedData}`;
 }
@@ -64,12 +73,20 @@ onUnmounted(() => {
 <template>
   <div id="content">
 
+    <div class="background">
+      <img src="/images/uma.jpeg">
+    </div>
+
     <section class="index">
       <div>
         <span class="title">Uma</span>
-        <span class="subtitle">Mi XV años</span>
+        <span class="subtitle">Mis XV años</span>
       </div>
       <span class="date">22.11.2024</span>
+      <button class="audio" @click="toggleMusic">
+        <svg v-if="isPlaying" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13,16V8H15V16H13M9,16V8H11V16H9M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z" /></svg>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M10,16.5L16,12L10,7.5V16.5Z" /></svg>
+      </button>
     </section>
 
     <section class="countdown">
@@ -114,6 +131,7 @@ onUnmounted(() => {
 
     <section class="paragraph">
       <p>La risa no tiene tiempo, la imaginación no tiene edad y los sueños son para siempre</p>
+      <p>...</p>
       <p>Yo soñé con esta noche mágica y quiero compartirla con vos</p>
     </section>
 

@@ -1,10 +1,12 @@
 @use '../abstracts' as *;
 
 .form {
+  @include flex(column, nowrap, center, center);
   width: 100%;
   input {
     width: 100%;
-    background-color: $teal-100;
+    max-width: 500px;
+    background-color: $purple-100;
     text-align: center;
     border-radius: 1rem;
     margin: .5rem 0;
@@ -12,13 +14,13 @@
     padding: .5rem .75rem;
     transition: all 100ms linear;
     &:focus {
-      background-color: $teal-400;
+      background-color: $purple-400;
     }
   }
 }
 
 .select {
-  @include flex(row, nowrap, center, center);
+  @include flex(row, wrap, center, center);
   gap: 2rem;
   font-size: 1.5rem;
   .option {

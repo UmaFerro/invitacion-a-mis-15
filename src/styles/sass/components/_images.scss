@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .image-container {
+  display: grid;
+  place-content: center;
   width: 100%;
   img {
     max-width: 100%;
