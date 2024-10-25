@@ -23,14 +23,14 @@
 @keyframes rotate {
     0% {
         transform: rotate(0deg) scale(1);
-        color: $purple-200;
+        color: $beige-200;
     }
     50% {
         transform: rotate(180deg) scale(1.2);
-        color: $purple-400;
+        color: $beige-400;
     }
     100% {
         transform: rotate(0deg) scale(1);
-        color: $purple-200;
+        color: $beige-200;
     }
 }

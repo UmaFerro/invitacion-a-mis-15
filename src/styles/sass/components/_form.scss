@@ -6,7 +6,7 @@
   input {
     width: 100%;
     max-width: 500px;
-    background-color: $purple-100;
+    background-color: $beige-100;
     text-align: center;
     border-radius: 1rem;
     margin: .5rem 0;
@@ -14,7 +14,14 @@
     padding: .5rem .75rem;
     transition: all 100ms linear;
     &:focus {
-      background-color: $purple-400;
+      color: $beige-50;
+      background-color: $beige-400;
+      &::placeholder {
+        color: $beige-50
+      }
+    }
+    &::placeholder {
+      color: $beige-400
     }
   }
 }

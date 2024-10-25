@@ -21,9 +21,9 @@ const song = ref({
   link: ''
 })
 const songRedirect = () => {
-  const data = `Nombre de la cancion: ${song.value.name}
-  Autor: ${song.value.author}
-  Link de la cancion: ${song.value.link}`
+  const data = `✨Nombre de la cancion: ${song.value.name}
+✨Autor: ${song.value.author}
+✨Link de la cancion: ${song.value.link}`
   const encodedData = encodeURIComponent(data);
   return `https://wa.me/+5492235219344?text=${encodedData}`;
 }
@@ -34,9 +34,9 @@ const confirmation = ref({
   data: ''
 })
 const confirmationRedirect = () => {
-  const data = `Nombre completo: ${confirmation.value.fullName}
-  Asistencia: ${confirmation.value.select}
-  ${confirmation.value.data === '' ? '' : `Dato importante: ${confirmation.value.data}`}`
+  const data = `✨Nombre completo: ${confirmation.value.fullName}
+✨Asistencia: ${confirmation.value.select}
+${confirmation.value.data === '' ? '' : `✨Dato importante: ${confirmation.value.data}`}`
   const encodedData = encodeURIComponent(data);
   return `https://wa.me/+5492235219344?text=${encodedData}`;
 }
@@ -102,7 +102,7 @@ onUnmounted(() => {
         <p>Av. Patricio Peralta Ramos 5050, Mar del Plata, Provincia de Buenos Aires</p>
       </div>
       <span>21:00hs</span>
-      <a href="https://www.google.com/maps/place/Jano's+Playa+Grande/@-38.0263882,-57.541312,15z/data=!4m6!3m5!1s0x9584dd70893c535d:0x7ddc7fac2960aa33!8m2!3d-38.0261389!4d-57.5303659!16s%2Fg%2F11tgf2gxjc?entry=ttu&g_ep=EgoyMDI0MTAyMS4xIKXMDSoASAFQAw%3D%3D" target="_blank" class="primary-button">VER UBICACIÓN</a>
+      <a href="https://www.google.com/maps/place/Jano's+Playa+Grande/@-38.0261389,-57.5303659,15z/data=!4m6!3m5!1s0x9584dd70893c535d:0x7ddc7fac2960aa33!8m2!3d-38.0261389!4d-57.5303659!16s%2Fg%2F11tgf2gxjc?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="primary-button">VER UBICACIÓN</a>
       <div class="image-container">
         <img src="/images/normandina.jpg">
       </div>
@@ -165,7 +165,11 @@ onUnmounted(() => {
     </section>
 
     <section class="end">
-      <h1 class="title"><strong class="alternative">✨</strong>Uma<strong>✨</strong></h1>
+      <div class="title">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,1L17.74,3.75L15,5L17.74,6.26L19,9L20.25,6.26L23,5L20.25,3.75M9,4L6.5,9.5L1,12L6.5,14.5L9,20L11.5,14.5L17,12L11.5,9.5M19,15L17.74,17.74L15,19L17.74,20.25L19,23L20.25,20.25L23,19L20.25,17.74" /></svg>
+        <h1>Uma</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,1L17.74,3.75L15,5L17.74,6.26L19,9L20.25,6.26L23,5L20.25,3.75M9,4L6.5,9.5L1,12L6.5,14.5L9,20L11.5,14.5L17,12L11.5,9.5M19,15L17.74,17.74L15,19L17.74,20.25L19,23L20.25,20.25L23,19L20.25,17.74" /></svg>
+      </div>
       <h2>22/11/2024</h2>
     </section>
   </div>

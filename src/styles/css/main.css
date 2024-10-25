@@ -22,15 +22,15 @@
 @keyframes rotate {
   0% {
     transform: rotate(0deg) scale(1);
-    color: #d5c7ff;
+    color: #ddd2b4;
   }
   50% {
     transform: rotate(180deg) scale(1.2);
-    color: #9e68ff;
+    color: #a09579;
   }
   100% {
     transform: rotate(0deg) scale(1);
-    color: #d5c7ff;
+    color: #ddd2b4;
   }
 }
 * {
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
 }
 
 ::selection {
-  background-color: #9e68ff;
+  background-color: #a09579;
   color: #fff;
 }
 
@@ -97,7 +97,7 @@ body {
   font-size: 100%;
   font-family: "Quicksand", sans-serif;
   color: #e9e9e9;
-  background-color: #400387;
+  background-color: #a09579;
   overflow-x: hidden;
 }
 body #content {
@@ -106,11 +106,11 @@ body #content {
   flex-direction: column;
   max-width: 600px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 .primary-button {
-  background-color: #d5c7ff;
-  color: #f0edff;
+  background-color: #ddd2b4;
   padding: 0.5em 1.5em;
   border-radius: 1rem;
   font-weight: 600;
@@ -121,8 +121,8 @@ body #content {
 }
 
 .secondary-button {
-  color: #b190ff;
-  background-color: #f0edff;
+  color: #d5c7a1;
+  background-color: #eee9d9;
   padding: 0.5em 1.5em;
   border-radius: 1rem;
   font-weight: 600;
@@ -133,13 +133,11 @@ body #content {
 }
 
 .image-container {
-  display: grid;
-  place-content: center;
   width: 100%;
 }
 .image-container img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 1rem;
 }
@@ -154,7 +152,7 @@ body #content {
 .form input {
   width: 100%;
   max-width: 500px;
-  background-color: #e9e4ff;
+  background-color: #e6ddc7;
   text-align: center;
   border-radius: 1rem;
   margin: 0.5rem 0;
@@ -163,7 +161,14 @@ body #content {
   transition: all 100ms linear;
 }
 .form input:focus {
-  background-color: #9e68ff;
+  color: #eee9d9;
+  background-color: #a09579;
+}
+.form input:focus::placeholder {
+  color: #eee9d9;
+}
+.form input::placeholder {
+  color: #a09579;
 }
 
 .select {
@@ -236,18 +241,18 @@ body #content {
   font-size: 1.25rem;
   font-weight: 600;
   padding: 0.25rem 0rem;
-  background-color: #9e68ff;
-  border-radius: 0.5rem;
+  background-color: #a09579;
+  border-radius: 1rem;
 }
 .index .audio {
   position: absolute;
   width: 3rem;
   height: 3rem;
-  bottom: 0.5rem;
+  top: 0.5rem;
   right: 0.5rem;
 }
 .index .audio svg {
-  color: #d5c7ff;
+  color: #ddd2b4;
   animation: rotate 400ms ease-in;
 }
 
@@ -256,7 +261,7 @@ body #content {
   place-content: center;
   padding: 2rem;
   min-height: 10rem;
-  background-color: #b190ff;
+  background-color: #d5c7a1;
   font-size: 2rem;
 }
 .countdown span {
@@ -271,12 +276,12 @@ body #content {
   gap: 1rem;
   padding: 4rem 2rem;
   min-height: 100vh;
-  background-color: #f0edff;
+  background-color: #eee9d9;
   color: #202124;
 }
 .address svg {
   width: 6rem;
-  color: #d5c7ff;
+  color: #ddd2b4;
 }
 .address h1 {
   font-size: 3rem;
@@ -298,7 +303,7 @@ body #content {
   align-items: center;
   gap: 1rem;
   padding: 4rem 2rem;
-  background-color: #b190ff;
+  background-color: #d5c7a1;
 }
 .hashtag svg {
   width: 6rem;
@@ -319,12 +324,12 @@ body #content {
   align-items: center;
   gap: 1rem;
   padding: 4rem 2rem;
-  background-color: #f0edff;
+  background-color: #eee9d9;
   color: #202124;
 }
 .songs svg {
   width: 6rem;
-  color: #d5c7ff;
+  color: #ddd2b4;
 }
 .songs h1 {
   font-size: 1.5rem;
@@ -346,7 +351,7 @@ body #content {
   align-items: center;
   gap: 1rem;
   padding: 4rem 2rem;
-  background-color: #b190ff;
+  background-color: #d5c7a1;
 }
 .dressCode svg {
   width: 6rem;
@@ -357,8 +362,8 @@ body #content {
 }
 .dressCode span {
   width: 100%;
-  background-color: #f0edff;
-  color: #b190ff;
+  background-color: #eee9d9;
+  color: #d5c7a1;
   font-size: 1.25rem;
   font-weight: 600;
   padding: 0.5rem;
@@ -373,12 +378,12 @@ body #content {
   gap: 1rem;
   padding: 4rem 2rem;
   min-height: 100vh;
-  background-color: #f0edff;
+  background-color: #eee9d9;
   color: #202124;
 }
 .confirmation svg {
   width: 6rem;
-  color: #d5c7ff;
+  color: #ddd2b4;
 }
 .confirmation h1 {
   font-size: 2rem;
@@ -391,18 +396,25 @@ body #content {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: #b190ff;
+  background-color: #d5c7a1;
 }
-.end h1 {
+.end .title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.end .title h1 {
   font-family: "Dancing Script", cursive;
   font-size: 5rem;
 }
-.end strong {
-  font-size: 2.5rem;
+.end .title svg {
+  width: 3rem;
+  transform: translateY(0.8rem);
 }
-.end strong.alternative {
-  display: inline-block;
-  transform: scaleX(-1) translateX(-8px);
+.end .title svg:last-child {
+  transform: scaleX(-1) translateY(0.8rem);
 }
 .end h2 {
   font-size: 1.25rem;

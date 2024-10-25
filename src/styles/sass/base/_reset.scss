@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
 }
 
 ::selection {
-  background-color: $purple-400;
+  background-color: $beige-400;
   color: $bg;
 }
 
@@ -63,7 +63,7 @@ body {
   font-size: 100%;
   font-family: $font;
   color: $gray-200;
-  background-color: $purple-800;
+  background-color: $beige-400;
   overflow-x: hidden;
   #content {
     flex-grow: 1;
@@ -71,5 +71,6 @@ body {
     flex-direction: column;
     max-width: 600px;
     margin: auto;
+    overflow-x: hidden;
   }
 }
